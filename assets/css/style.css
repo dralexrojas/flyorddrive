@@ -1,0 +1,87 @@
+.jumbotron{   
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    border: 5px solid gray;
+}
+
+.container{
+    background-color: lightgray;
+    width: 100%;
+    min-height: 750px;
+
+}
+
+#logo{
+    width: 100%;
+    height: 100%;
+}
+
+#lastTrip{
+    padding: 10px;
+    border-radius: 25px;
+
+}
+
+@media (min-width: 768px) {
+    .col1 {
+       background-color: whitesmoke;
+       float: right;
+ }
+
+ .results{
+     width: 100%;
+     height: 100%;
+     margin: 5px;
+     display: none;
+ }
+
+ .form-row{
+     width: 100%;
+     height: 100%;
+     margin: 5px;
+ }
+
+ .modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('https://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+body.loading .modal {
+    overflow: hidden;   
+}
+
+body.loading .modal {
+    display: block;
+}
+
+#dialog{
+    background-color: whitesmoke;
+    color: black;
+    border: 3px solid gray;
+    margin: 1px;
+    padding: 5px;
+}
+
+.ui-dialog-titlebar{
+    background-color: whitesmoke;
+    color: black;
+    border: 3px solid gray;
+    margin: 1px;
+    padding: 3px;
+    height: 45px;
+}
+
+.ui-button{
+    float: right;
+    margin: 3px;
+}}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="assets/javascript/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+    <title>Fly or Drive</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="dialog" title="Welcome!">
+            <p>Fly or Drive is a quick way to compare your travel options.  Enter your starting city and destination city to find out if you should
+                Fly or Drive!
+            </p>
+          </div>
+        
+        <div class="jumbotron">
+            <img id="logo" src="./assets/images/projectOneLogo.png" alt="Fly or Drive">
+        </div>
+
+        <div id="searchForm" class="form">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputAddress">Starting City</label>
+                    <input type="text" class="form-control" id="inputAddressStart" placeholder="example: Los Angeles">
+                </div>
+                <div class="form-group col-md-offset-4">
+                    <label for="inputCity">Start Date</label>
+                    <input type="text" class="form-control" id="startDate" placeholder="YYYY-MM-DD">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputAddress">Destination City</label>
+                    <input type="text" class="form-control" id="inputAddressEnd"  placeholder="example: New York">
+                </div>
+                <div class="form-group col-md-offset-4">
+                    <label for="inputCity">Start End</label>
+                    <input type="text" class="form-control" id="endDate" placeholder="YYYY-MM-DD">
+                </div>
+                <div class="form-group col-sm-offset-1">
+                        <label for="inputPassengers">Passengers</label>
+                        <input type="text" class="form-control" id="inputPassengers">
+                </div>
+            </div>      
+            <div class="form-row">
+                <button id="submit" type="submit" class="btn btn-primary" value="click">Let's Go!</button>
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="col1 col-md-6" id="lastTrip">
+                    <h2>LAST TRIP</h2>
+                    
+
+                    You were last thinking about <span id=startCityLast></span> to <span id=endCityLast></span> from <span id=firstDateLast></span> to <span id=endDateLast></span> for <span id=passengersLast></span><br><br>
+
+                    
+                    <h2>FLY</h2>
+                    <span id="airlineOneLast"></span><br>
+                    <span id="ticketPriceOneLast"></span><br>
+                    <span id="airlineTwoLast"></span><br>
+                    <span id="ticketPriceTwoLast"></span><br>
+                    
+                    <h2>DRIVE</h2>
+                    Price per Gallon: $<span id="gallonCostLast"></span><br>
+                    Mileage: <span id="mileageLast"></span><br>
+                    Gas: $<span id="gasCostLast"> </span><br>
+                </div>
+            
+            </div>
+
+        </div>
+        <br>
+
+        <div id="results" class="results">         
+                <button id="newSearch" class="btn btn-primary">New Trip</button>
+                <br>
+                <br>
+                <div class="results-row" >
+                        <div class="col2 col-md-6" id="flyResults">
+                            <h2>FLY</h2>
+                            <span id="airlineOne"></span><br>
+                            <span id="ticketPriceOne"></span><br>
+                            <span id="airlineTwo"></span><br>
+                            <span id="ticketPriceTwo"></span><br>
+                        </div>
+                
+                        <div class="col3 col-md-6" id="driveResults">
+                            <h2>DRIVE</h2>
+                            Price per Gallon: $<span id="gallonCost"></span><br>
+                            Mileage: <span id="mileage"></span><br>
+                            Gas: $<span id="gasCost"> </span><br>
+                        </div>
+                </div>       
+        </div>
+        <div class="modal"></div> 
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="assets/javascript/flights.js"></script>
+
+</body>
+
+</html>
